@@ -43,7 +43,7 @@
 </head>
 <body>
   <h1>𝕾𝖚𝖕𝖊𝖗 𝕮𝖆𝖗𝖗𝖔𝖘</h1>
-  <img src="ferrari.jpg" alt="Ferrari Purosangue Vermelha">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFXz2W1Yp0i31x9NwF9v7He0dVrGjtkfWU7vOCjAFWtrwk9v83b8dzZ5txsij3dQu_261-hFueefChTH0c91v38d1oBaI8xQIG4zMbaVPXjtLABbpZv38x9iVXT5xqaDLhS0T1356S-Zt76ZYA8g_MJfGqwUGknTsTM09RLGLPRcbGcX8tlV6DXRw2LxGa/s2560/Static_Rosso_Portofino_021223-10.jpg" alt="Ferrari Purosangue Vermelha">
   <p>Super carros são máquinas de alto desempenho, com design exclusivo e velocidade impressionante.</p>
 </body>
 </html>
