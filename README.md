@@ -43,7 +43,7 @@
 </head>
 <body>
   <h1>𝕾𝖚𝖕𝖊𝖗 𝕮𝖆𝖗𝖗𝖔𝖘</h1>
-  <img src="https://cdn.motor1.com/images/mgl/8Z1E4e/s1/ferrari-purosangue.jpg" alt="Ferrari Purosangue Vermelha">
+  <img src="ferrari.jpg" alt="Ferrari Purosangue Vermelha">
   <p>Super carros são máquinas de alto desempenho, com design exclusivo e velocidade impressionante.</p>
 </body>
 </html>
