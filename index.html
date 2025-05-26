@@ -16,7 +16,6 @@
     h1, h2 {
       font-family: 'Courier New', monospace;
       color: red;
-      /* Aplica brilho vermelho + borda branca só no título principal */
       text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 0 0 10px #ff000070;
     }
 
@@ -26,7 +25,6 @@
       margin-bottom: 10px;
     }
 
-    /* Remove borda branca do subtítulo geral */
     h2.subtitulo {
       color: white;
       text-shadow: none;
@@ -81,6 +79,7 @@
         0 0 20px 5px white,
         0 4px 12px rgba(0, 0, 0, 0.5);
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .image-container img:hover {
@@ -97,18 +96,29 @@
       padding: 0 15px;
     }
 
+    #descricao, #texto-container {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      text-align: justify;
+      color: white;
+    }
+
+    #descricao:hover,
+    #texto-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 15px 5px white;
+    }
+
     #texto-container {
       background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 12px;
-      padding: 30px;
-      margin: 40px auto;
-      max-width: 900px;
       color: #fff;
-      text-align: justify;
     }
 
     #texto-container p {
-      color: #fff;
       font-size: 1rem;
       line-height: 1.6;
     }
