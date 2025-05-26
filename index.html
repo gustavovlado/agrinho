@@ -16,12 +16,8 @@
     h1, h2 {
       font-family: 'Courier New', monospace;
       color: red;
-      text-shadow:
-        2px 2px 0 white,
-       -2px -2px 0 white,
-        2px -2px 0 white,
-       -2px 2px 0 white,
-        0 0 10px #ff000070;
+      /* Aplica brilho vermelho + borda branca só no título principal */
+      text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 0 0 10px #ff000070;
     }
 
     h1 {
@@ -30,9 +26,14 @@
       margin-bottom: 10px;
     }
 
-    h2 {
+    /* Remove borda branca do subtítulo geral */
+    h2.subtitulo {
+      text-shadow: none;
+      color: red;
       font-size: 1.8rem;
       margin-top: 0;
+      margin-bottom: 15px;
+      font-family: 'Courier New', monospace;
     }
 
     nav {
@@ -100,11 +101,11 @@
       margin: 40px auto;
       max-width: 900px;
       color: #fff;
+      text-align: justify;
     }
 
     #texto-container p {
       color: #fff;
-      text-align: justify;
       font-size: 1rem;
       line-height: 1.6;
     }
@@ -134,7 +135,7 @@
   </div>
 
   <div id="texto-container">
-    <h2 style="color: white;">Campo e Cidade: dois mundos diferentes</h2>
+    <h2 class="subtitulo">Campo e Cidade: dois mundos diferentes</h2>
     <p>
       A vida no campo e na cidade oferece contrastes marcantes. No campo, o ritmo é mais calmo, com cenários naturais, 
       sons de pássaros e atividades que envolvem agricultura, criação de animais e uma conexão mais direta com a terra. 
