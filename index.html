@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #006400 0%, #c40000 100%);
+      background: linear-gradient(to right, #c40000 0%, #006400 100%);
       text-align: center;
       color: #fff;
       overflow-x: hidden;
@@ -79,6 +79,19 @@
       display: block;
     }
 
+    /* Ajustar ordem das imagens para manter carro à esquerda e carroça à direita */
+    #imagens {
+      flex-direction: row;
+    }
+
+    #imagens .img-wrapper:first-child {
+      order: 0;
+    }
+
+    #imagens .img-wrapper:last-child {
+      order: 1;
+    }
+
     .description {
       margin-top: 20px;
       color: white;
@@ -147,7 +160,7 @@
       background-color: rgba(0, 0, 0, 0.6);
       color: white;
       text-align: center;
-      padding: 6px 0; /* altura menor para rodapé mais fino */
+      padding: 6px 0; /* rodapé mais fino */
       position: fixed;
       width: 100%;
       bottom: 0;
@@ -196,14 +209,12 @@
     <p>
       O contraste entre o campo e a cidade é visível em muitos aspectos do dia a dia, e a escolha dos veículos é um deles. Enquanto as cidades exigem carros modernos, ágeis e eficientes para lidar com o trânsito e as demandas urbanas, o campo ainda preserva tradições com o uso de carroças e veículos mais simples que atendem às suas necessidades específicas.
       <br /><br />
-      Essa diversidade revela não só as diferenças econômicas e culturais, mas também o modo como cada ambiente influencia a vida das pessoas, suas rotinas e até mesmo a forma como elas se locomovem. Carros modernos simbolizam progresso e inovação, enquanto as carroças carregam histórias de um tempo passado, valorizando a simplicidade e a conexão com a natureza.
-      <br /><br />
-      Compreender essa relação ajuda a valorizar a riqueza cultural presente em ambos os contextos e a importância de respeitar as escolhas e necessidades de cada região.
+      Essa diversidade revela não só as diferenças econômicas e culturais, mas também o modo como cada ambiente influencia a vida das pessoas, suas rotinas e o modo de se locomover.
     </p>
   </section>
 
   <footer>
-    <p>Copyright © 2025 Gustavo S.</p>
+    &copy; 2025 Todos os direitos reservados
   </footer>
 
 </body>
