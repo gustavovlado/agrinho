@@ -3,132 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>𝓒𝓐𝓜𝓟𝓞 𝓔 𝓒𝓘𝓓𝓐𝓓𝓔</title>
+  <title>𝓒𝓐𝓜𝓟𝓞 𝓔 𝓒𝓘𝓓𝓐𝓓𝓔 - 𝓐 𝓓𝓘𝓕𝓔𝓡𝓔𝓝𝓒̧𝓐 𝓔𝓜 𝓢𝓔𝓤𝓢 𝓥𝓔𝓘́𝓒𝓤𝓛𝓞𝓢</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #003300 0%, #c40000 100%);
+      background: linear-gradient(to right, #006400 0%, #c40000 100%);
       text-align: center;
-      scroll-behavior: smooth;
-      padding-bottom: 50px; /* espaço para o footer fixo */
-    }
-
-    h1, h2 {
-      font-family: 'Courier New', monospace;
-      color: red;
-      text-shadow: 2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white, 0 0 10px #ff000070;
+      color: #fff;
+      overflow-x: hidden;
     }
 
     h1 {
-      font-size: 2.5rem;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    h2.subtitulo {
-      color: white;
-      text-shadow: none;
-      font-size: 1.8rem;
-      margin-top: 0;
-      margin-bottom: 15px;
       font-family: 'Courier New', monospace;
-      text-align: center;
-    }
-
-    nav {
-      margin-top: 20px;
-    }
-
-    nav button {
-      margin: 0 10px;
-      padding: 10px 20px;
-      font-size: 1rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background-color: white;
-      color: #c40000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-      transition: background-color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    nav button:hover {
-      background-color: #f5f5f5;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px 5px white;
-    }
-
-    .image-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
-      gap: 50px;
-      padding: 0 10px;
-    }
-
-    .image-container img {
-      width: 45%;
-      max-width: 500px;
-      height: auto;
-      border-radius: 10px;
-      border: 4px solid black;
-      box-shadow:
-        0 0 20px 5px white,
-        0 4px 12px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .image-container img:hover {
-      transform: scale(1.02);
-    }
-
-    p {
+      font-size: 3rem;
       margin-top: 30px;
+      color: red;
+      text-shadow:
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white,
+        0 0 10px red;
+    }
+
+    .title-top {
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .title-bottom {
+      display: block;
+      font-size: 1.5rem;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-family: 'Courier New', monospace;
+      color: red;
+      text-shadow:
+        -2px -2px 0 white,
+        2px -2px 0 white,
+        -2px 2px 0 white,
+        2px 2px 0 white,
+        0 0 10px red;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px; /* espaçamento entre imagens */
+      margin: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    .img-wrapper {
+      position: relative;
+      width: 45%;
+      max-width: 700px;
+      border: 3px solid black;
+      border-radius: 10px;
+      box-shadow: 0 0 15px white;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .img-wrapper:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px white;
+      z-index: 5;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 7px;
+      display: block;
+    }
+
+    .description {
+      margin-top: 20px;
+      color: white;
       font-size: 1.2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin-left: auto;
       margin-right: auto;
-      color: white;
       padding: 0 15px;
     }
 
-    #descricao, #texto-container {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      border-radius: 12px;
-      padding: 20px;
-      max-width: 900px;
-      margin: 40px auto;
-      text-align: justify;
+    nav {
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    nav button {
+      background-color: #c40000;
       color: white;
-    }
-
-    #descricao:hover,
-    #texto-container:hover {
-      transform: scale(1.02);
-      box-shadow: 0 0 15px 5px white;
-    }
-
-    #texto-container {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: #fff;
-    }
-
-    #texto-container p {
+      border: 2px solid white;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 8px;
       font-size: 1rem;
-      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    nav button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px white;
+      outline: none;
+    }
+
+    .text-area {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: white;
+      max-width: 900px;
+      margin: 0 auto 50px;
+      padding: 20px;
+      border-radius: 12px;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-family: Arial, sans-serif;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .text-area:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px white;
+      z-index: 3;
+    }
+
+    .text-area h3 {
+      text-align: center;
+      color: white;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.8rem;
+      font-weight: normal;
     }
 
     footer {
       background-color: rgba(0, 0, 0, 0.6);
       color: white;
       text-align: center;
-      padding: 12px 0;
+      padding: 6px 0; /* altura menor para rodapé mais fino */
       position: fixed;
       width: 100%;
       bottom: 0;
@@ -140,48 +159,52 @@
   </style>
 </head>
 <body>
-  <h1>𝓒𝓐𝓜𝓟𝓞 𝓔 𝓒𝓘𝓓𝓐𝓓𝓔</h1>
-  <h2>𝓐 𝓓𝓘𝓕𝓔𝓡𝓔𝓝𝓒̧𝓐 𝓔𝓜 𝓢𝓔𝓤𝓢 𝓥𝓔𝓘́𝓒𝓤𝓛𝓞𝓢</h2>
+
+  <h1>
+    <span class="title-top">𝓒𝓐𝓜𝓟𝓞 𝓔 𝓒𝓘𝓓𝓐𝓓𝓔</span>
+    <span class="title-bottom">𝓐 𝓓𝓘𝓕𝓔𝓡𝓔𝓝𝓒̧𝓐 𝓔𝓜 𝓢𝓔𝓤𝓢 𝓥𝓔𝓘́𝓒𝓤𝓛𝓞𝓢</span>
+  </h1>
 
   <nav>
-    <button onclick="document.getElementById('imagens').scrollIntoView()">Imagens</button>
-    <button onclick="document.getElementById('descricao').scrollIntoView()">Descrição</button>
-    <button onclick="document.getElementById('texto-container').scrollIntoView()">Texto</button>
+    <button onclick="document.getElementById('imagens').scrollIntoView({ behavior: 'smooth' });">Imagens</button>
+    <button onclick="document.getElementById('descricao').scrollIntoView({ behavior: 'smooth' });">Descrição</button>
+    <button onclick="document.getElementById('texto').scrollIntoView({ behavior: 'smooth' });">Texto</button>
   </nav>
 
-  <div id="imagens" class="image-container">
-    <img src="https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2024/06/carroca.jpg?quality=70&strip=info&w=1024" alt="Carroça antiga no campo">
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFXz2W1Yp0i31x9NwF9v7He0dVrGjtkfWU7vOCjAFWtrwk9v83b8dzZ5txsij3dQu_261-hFueefChTH0c91v38d1oBaI8xQIG4zMbaVPXjtLABbpZv38x9iVXT5xqaDLhS0T1356S-Zt76ZYA8g_MJfGqwUGknTsTM09RLGLPRcbGcX8tlV6DXRw2LxGa/s2560/Static_Rosso_Portofino_021223-10.jpg" alt="Ferrari Purosangue Vermelha">
-  </div>
+  <section id="imagens" class="container">
+    <div class="img-wrapper">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFXz2W1Yp0i31x9NwF9v7He0dVrGjtkfWU7vOCjAFWtrwk9v83b8dzZ5txsij3dQu_261-hFueefChTH0c91v38d1oBaI8xQIG4zMbaVPXjtLABbpZv38x9iVXT5xqaDLhS0T1356S-Zt76ZYA8g_MJfGqwUGknTsTM09RLGLPRcbGcX8tlV6DXRw2LxGa/s2560/Static_Rosso_Portofino_021223-10.jpg" alt="Ferrari Purosangue Vermelha" />
+    </div>
+    <div class="img-wrapper">
+      <img src="https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2024/06/carroca.jpg?quality=70&strip=info&w=1024" alt="Carroça Antiga" />
+    </div>
+  </section>
 
-  <div id="descricao">
+  <section id="descricao" class="description">
+    <h2>Diferenças entre carros modernos e antigos</h2>
     <p>
-      Os veículos representam muito mais que meios de transporte — refletem contextos sociais, econômicos e históricos. 
-      Nas cidades modernas, carros como superesportivos dominam as ruas com tecnologia de ponta, enquanto no campo, 
-      as carroças ainda são comuns, mantendo viva uma tradição antiga e mostrando o contraste entre o passado e o presente.
+      Carros modernos são máquinas de alto desempenho, com design exclusivo, tecnologia avançada e velocidades impressionantes. Eles representam o ápice da engenharia automotiva, focados em eficiência, conforto e segurança.
+      <br /><br />
+      Já os veículos antigos, como as carroças, remetem a tempos em que o transporte era mais simples, lento e dependia da força animal. Eles têm um valor histórico e cultural, mostrando a evolução da mobilidade humana.
+      <br /><br />
+      Essa diferença entre campo e cidade também se reflete nos veículos usados: nas cidades predominam os carros modernos, enquanto no campo ainda é comum ver carroças e veículos mais tradicionais.
     </p>
-  </div>
+  </section>
 
-  <div id="texto-container">
-    <h2 class="subtitulo">Campo e Cidade: dois mundos diferentes</h2>
+  <section id="texto" class="text-area">
+    <h3>Campo e Cidade - uma relação refletida em seus veículos</h3>
     <p>
-      A vida no campo e na cidade oferece contrastes marcantes. No campo, o ritmo é mais calmo, com cenários naturais, 
-      sons de pássaros e atividades que envolvem agricultura, criação de animais e uma conexão mais direta com a terra. 
-      Já nas cidades, tudo é acelerado: carros, prédios, tecnologias e uma rotina muitas vezes corrida. As relações sociais 
-      também mudam — no campo, todos se conhecem e se ajudam com frequência; na cidade, o anonimato é mais comum.
-      <br/><br/>
-      Os veículos que circulam nesses ambientes refletem essas diferenças. No campo, a carroça ainda é símbolo de simplicidade 
-      e praticidade para quem precisa se locomover entre terrenos e vilas próximas. Na cidade, os carros modernos trazem luxo, 
-      conforto e velocidade, se tornando verdadeiros símbolos de status. A infraestrutura acompanha essa realidade: ruas largas, 
-      asfaltadas e cheias de sinalização urbana. Enquanto isso, no campo, muitas vezes as estradas são de terra e os trajetos longos.
-      <br/><br/>
-      Apesar das diferenças, tanto o campo quanto a cidade têm seu charme e importância. Cada ambiente oferece qualidades únicas 
-      que moldam a cultura e o estilo de vida das pessoas que ali vivem.
+      O contraste entre o campo e a cidade é visível em muitos aspectos do dia a dia, e a escolha dos veículos é um deles. Enquanto as cidades exigem carros modernos, ágeis e eficientes para lidar com o trânsito e as demandas urbanas, o campo ainda preserva tradições com o uso de carroças e veículos mais simples que atendem às suas necessidades específicas.
+      <br /><br />
+      Essa diversidade revela não só as diferenças econômicas e culturais, mas também o modo como cada ambiente influencia a vida das pessoas, suas rotinas e até mesmo a forma como elas se locomovem. Carros modernos simbolizam progresso e inovação, enquanto as carroças carregam histórias de um tempo passado, valorizando a simplicidade e a conexão com a natureza.
+      <br /><br />
+      Compreender essa relação ajuda a valorizar a riqueza cultural presente em ambos os contextos e a importância de respeitar as escolhas e necessidades de cada região.
     </p>
-  </div>
+  </section>
 
   <footer>
-    <p>Copyright © 2025 gustavovlado</p>
+    <p>Copyright © 2025 Gustavo S.</p>
   </footer>
+
 </body>
 </html>
